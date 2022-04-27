@@ -32,7 +32,7 @@
 
 
 /*=============== HOME SWIPER ===============*/
-var swiper = new Swiper(".home-swiper", {
+var homeSwiper = new Swiper(".home-swiper", {
     spaceBetween: 30,
     loop: 'true',
 
@@ -51,7 +51,12 @@ function scrollHeader() {
 }
 window.addEventListener('scroll', scrollHeader)
 /*=============== NEW SWIPER ===============*/
-
+var newSwiper = new Swiper(".new-swiper", {
+    spaceBetween: 16,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    loop: 'true',
+});
 
 /*=============== SHOW SCROLL UP ===============*/
 
