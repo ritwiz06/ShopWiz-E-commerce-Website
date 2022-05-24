@@ -788,15 +788,147 @@ input {
 
 
 /*=============== FAQ PAGE ===============*/
+.questions__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    align-items: flex-start;
+
+}
+
+.questions__group {
+    display: grid;
+    row-gap: 2rem;
+
+}
+
+.questions__item {
+    background-color: var(--container-color);
+    border-radius: .25rem;
+}
+
+.questions__item-title {
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+
+}
+
+.questions__icon {
+    font-size: 1.25rem;
+    color: var(--title-color);
+}
+
+.questions__description {
+
+    font-size: var(--smaller-font-size);
+    padding: 0 3.5rem 2.25rem 2.75rem;
+}
+
+.questions__header {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.questions__content {
+    overflow: hidden;
+    height: 0;
+
+}
+
+.questions__item,
+.questions__header,
+.questions__item-title,
+.questions__icon,
+.questions__description,
+.questions__content {
+    transition: .3s;
+}
+
+
 
 
 /*Rotate icon, change color of titles and background*/
+.accordion-open .questions__header,
+.accordion-open .questions__description {
+    background-color: var(--first-color);
 
+}
+
+.accordion-open .questions__item-title,
+.accordion-open .questions__description,
+.accordion-open .questions__icon {
+    color: #fff;
+}
+
+.accordion-open .questions__icon {
+    transform: rotate(45deg);
+}
 
 /*=============== REGISTRATION PAGE ===============*/
 
 
 /*=============== CONTACT PAGE ===============*/
+.contact__container {
+    grid-template-columns: .9fr 1.1fr;
+    column-gap: 1.5rem;
+}
+
+.contact__info {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--mb-2);
+
+}
+
+.contact__icon {
+    font-size: 2rem;
+    color: var(--first-color);
+    margin-right: var(--mb-0-75);
+}
+
+.contact__title {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+}
+
+.contact__subtitle {
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+}
+
+.contact__form {
+    row-gap: 1.5rem;
+}
+
+.contact__content {
+    background-color: var(--container-color);
+    border-radius: .5rem;
+    padding: .75rem 1rem .25rem;
+}
+
+.contact__label {
+    font-size: var(--smaller-font-size);
+    color: var(--title-color);
+}
+
+.contact__inputs {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+}
+
+.contact__input {
+    width: 100%;
+    background-color: var(--container-color);
+    color: var(--text-color);
+    font-size: var(--normal-font-size);
+    border: none;
+    outline: none;
+    padding: .25rem .5rem .5rem 0;
+
+}
+
 
 
 /*=============== FOOTER ===============*/
@@ -1245,6 +1377,25 @@ input {
         font-size: var(--normal-font-size);
     }
 
+    .questions__group {
+        row-gap: 1.5rem;
+    }
+
+    .questions__header {
+        padding: .75rem .75rem;
+    }
+
+    .questions__description {
+        padding: 0 1.25rem 1.25rem 2.5rem;
+    }
+
+    .contact__inputs {
+        grid-template-columns: 1fr;
+        row-gap: 1.5rem;
+        padding: 0rem 0rem 1rem 0;
+    }
+
+
 }
 
 /* For medium devices */
@@ -1339,6 +1490,9 @@ input {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .questions__container {
+        grid-template-columns: 1fr;
+    }
 
     .footer__container {
         grid-template-columns: 1fr;
@@ -1398,6 +1552,11 @@ input {
     .blog__post {
         grid-template-columns: 1fr;
         row-gap: .8rem;
+    }
+
+    .contact__container {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
     }
 
 }
